@@ -32,6 +32,7 @@ def start_game():
      (_/\_) \__/(__\_)(____/\____/(____)   \___/\_/\_/\_)(_/(____)
 
       Instruction:
+      1. Wordle is a single player game.
       1. Please note you have 3 lives.
       2. Please input your username and it must be more than 3 characters.
       3. You cannot move on to guess another word, until the first word is guessed.
@@ -74,15 +75,16 @@ def update_clue(guessed_letter, secret_word, clue):
 
 
 #ask for user input to guess the letter or the word  
+
+    
 def validate_word(word):
     print()
    
-    while len(word) > 1: 
+    while len(word) < 1: 
         words = input('invalid word: Please enter a word: ')
         print()
     return True
-
-
+   
 
 
 while lives > 0:
@@ -97,11 +99,34 @@ while lives > 0:
     if guess in secret_word:
         update_clue(guess, secret_word, clue)
     else:
-        print('Sorry, that letter in not in the wor. You lost a life')
+        print('Sorry, that letter in not in the word. You lost a life')
         lives -= 1
 
 #check if the player has won or lost
+
 if guessed_word_correctly:
-    print('You guessed the word! You win!' + secret_word)
+    print('You guessed the word! You win! ➕ ' + secret_word)
 else:
-    print('Sorry, you lost. The word was' + secret_word)
+    print('Sorry, you lost  ❌. The word was' + secret_word)
+
+if lives == 0:
+        print(""" 
+                 ## ##     ##     ##   ##  ### ###            ## ##   ### ###  ### ###  ### ##   
+                ##   ##     ##     ## ##    ##  ##           ##   ##   ##  ##   ##  ##   ##  ##  
+                ##        ## ##   # ### #   ##               ##   ##   ##  ##   ##       ##  ##  
+                ##  ###   ##  ##  ## # ##   ## ##            ##   ##   ##  ##   ## ##    ## ##   
+                ##   ##   ## ###  ##   ##   ##               ##   ##   ### ##   ##       ## ##   
+                ##   ##   ##  ##  ##   ##   ##  ##           ##   ##    ###     ##  ##   ##  ##  
+                 ## ##   ###  ##  ##   ##  ### ###            ## ##      ##    ### ###  #### ##  
+                                                                                 
+""")
+def playagain():
+    print('Do you want to play again?')
+    choose = input('Yes or No?')
+    choose = choose.upper()
+    if choose == 'YES':
+        pass
+    else:
+        exit()  
+
+
