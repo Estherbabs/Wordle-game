@@ -2,34 +2,40 @@ import random
 lives = 3
 
 
-#create a list of secret words
+#create a list of secret words which the user needs to guess
 words = ['happy', 'gracious', 'javascript',
          'python', 'wealth', 'command', 
           'consult', 'fulfil', 'computer',
           'unlock', 'career', 'hope']
 
 
-#use the choice function of the random module to randomly pick a word
+#The random module choice function is used here and this will enable users to randomly pick a word
 secret_word = random.choice(words)    
 
 
-#create another list to store the clues
+#Another list has been created here to store the clues
 clue = list('?????')
 heart_symbol = u'\u2764'
 
 guessed_word_correctly = False
 
-# a function to update  the clue list
+
+#This defines the beginning of the game which includes the game name, instructions and introduction
+#The website below is an ASCII website to design the name of the game and also the word 'Game over'
 
 def start_game():
     """
      https://patorjk.com/software/taag/#p=display&f=Graceful&t=Wordle%20game
     """
     print(  """
-      _  _   __  ____  ____  __    ____     ___   __   _  _  ____ 
-     / )( \ /  \(  _ \(    \(  )  (  __)   / __) / _\ ( \/ )(  __)
-     \ /\ /(  O ))   / ) D (/ (_/\ ) _)   ( (_ \/    \/ \/ \ ) _) 
-     (_/\_) \__/(__\_)(____/\____/(____)   \___/\_/\_/\_)(_/(____)
+       
+       
+        _  _   __  ____  ____  __    ____     ___   __   _  _  ____ 
+       / )( \ /  \(  _ \(    \(  )  (  __)   / __) / _\ ( \/ )(  __)
+       \ /\ /(  O ))   / ) D (/ (_/\ ) _)   ( (_ \/    \/ \/ \ ) _) 
+       (_/\_) \__/(__\_)(____/\____/(____)   \___/\_/\_/\_)(_/(____)
+                                                                                    
+
 
       Instruction:
       1. Wordle is a single player game.
@@ -41,11 +47,14 @@ def start_game():
       """)
 
       
-    print(f"Welcome to Wordle game")
+    print(f"Welcome to Wordle game!!!")
 
 
 
 start_game()
+
+#This function is to make the user enter name and also validate it
+#If name is less than 3 words, it wouldnt make the user go further until the name is more than 3 words
 
 def get_player_name():
     print()
@@ -65,7 +74,7 @@ def get_player_name():
 get_player_name()
 
 
-
+# a function has been created here for the clue list to be updated
 def update_clue(guessed_letter, secret_word, clue):
     index = 0
     while index < len(secret_word):
@@ -73,8 +82,6 @@ def update_clue(guessed_letter, secret_word, clue):
             clue[index] = guessed_letter
         index += 1
 
-
-#ask for user input to guess the letter or the word  
 
     
 def validate_word(word):
@@ -85,13 +92,14 @@ def validate_word(word):
         print()
     return True
    
-
+#The function as for user to input the guessed letter or word
 
 while lives > 0:
     print(clue)
     print('You have' + str(heart_symbol * lives) + 'lives remaining')
     guess = input('Guess a letter or the whole word: ')
     validate_word(guess)
+    
     if guess == secret_word:
         guessed_word_correctly = True
         break
@@ -107,26 +115,41 @@ while lives > 0:
 if guessed_word_correctly:
     print('You guessed the word! You win! ➕ ' + secret_word)
 else:
-    print('Sorry, you lost  ❌. The word was' + secret_word)
+    print('Sorry, you lost  ❌. The word was'  + secret_word)
+
+
+#This function indicates the end of the wordle game after the user's lives are exhausted
+#This function also gives the users the option to play again or exit the game
 
 if lives == 0:
-        print(""" 
-                 ## ##     ##     ##   ##  ### ###            ## ##   ### ###  ### ###  ### ##   
-                ##   ##     ##     ## ##    ##  ##           ##   ##   ##  ##   ##  ##   ##  ##  
-                ##        ## ##   # ### #   ##               ##   ##   ##  ##   ##       ##  ##  
-                ##  ###   ##  ##  ## # ##   ## ##            ##   ##   ##  ##   ## ##    ## ##   
-                ##   ##   ## ###  ##   ##   ##               ##   ##   ### ##   ##       ## ##   
-                ##   ##   ##  ##  ##   ##   ##  ##           ##   ##    ###     ##  ##   ##  ##  
-                 ## ##   ###  ##  ##   ##  ### ###            ## ##      ##    ### ###  #### ##  
+    print(""" 
+                
+        
+      _______  _______  _______  _______    _______           _______  _______ 
+     (  ____ \(  ___  )(       )(  ____ \  (  ___  )|\     /|(  ____ \(  ____ )
+     | (    \/| (   ) || () () || (    \/  | (   ) || )   ( || (    \/| (    )|
+     | |      | (___) || || || || (__      | |   | || |   | || (__    | (____)|
+     | | ____ |  ___  || |(_)| ||  __)     | |   | |( (   ) )|  __)   |     __)
+     | | \_  )| (   ) || |   | || (        | |   | | \ \_/ / | (      | (\ (   
+     | (___) || )   ( || )   ( || (____/\  | (___) |  \   /  | (____/\| ) \ \__
+     (_______)|/     \||/     \|(_______/  (_______)   \_/   (_______/|/   \__/
+                                                                          
+
+ 
+
+ 
                                                                                  
+Do you want to play again?
+
 """)
-def playagain():
-    print('Do you want to play again?')
+        
     choose = input('Yes or No?')
     choose = choose.upper()
-    if choose == 'YES':
-        pass
-    else:
-        exit()  
+    if choose == 'Yes':
+            pass
+    elif choose == 'No':
+            exit()
+           
+ 
 
 
