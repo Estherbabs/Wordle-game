@@ -60,6 +60,7 @@ def get_player_name():
     print()
 
     while True:
+        global PlayerName
         PlayerName = input('Please enter your name: ')
 
         if len(PlayerName) > 3:
@@ -96,7 +97,7 @@ def validate_word(word):
 
 while lives > 0:
     print(clue)
-    print('You have' + str(heart_symbol * lives) + 'lives remaining')
+    print('You have ' + str(heart_symbol * lives) + ' lives remaining')
     guess = input('Guess a letter or the whole word: ')
     validate_word(guess)
     
@@ -107,15 +108,15 @@ while lives > 0:
     if guess in secret_word:
         update_clue(guess, secret_word, clue)
     else:
-        print('Sorry, that letter in not in the word. You lost a life')
+        print('Sorry,' + PlayerName + ' ' + ' that letter in not in the word. You lost a life')
         lives -= 1
 
 #check if the player has won or lost
 
 if guessed_word_correctly:
-    print('You guessed the word! You win! ➕ ' + secret_word)
+    print(PlayerName + ' You guessed the word! You win! ➕ ' + secret_word)
 else:
-    print('Sorry, you lost  ❌. The word was'  + secret_word)
+    print('Sorry, you lost  ❌. The word was '  + secret_word)
 
 
 #This function indicates the end of the wordle game after the user's lives are exhausted
