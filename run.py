@@ -36,6 +36,10 @@ class game:
        \ /\ /(  O ))   / ) D (/ (_/\ ) _)   ( (_ \/    \/ \/ \ ) _)
        (_/\_) \__/(__\_)(____/\____/(____)   \___/\_/\_/\_)(_/(____)
 
+       To play this game, player needs to guess the secret word or letter
+       and if guessed correctly user wins, if word or letter is guessed wrongly
+       user loses. Please see instruction below. Enjoy!
+
       Instruction:
       1. Wordle is a single player game.
       2. Please note you have 3 lives.
@@ -124,16 +128,6 @@ if lives == 0:
      | | \_  )| (   ) || |   | || (        | |   | | \ \_/ / | (      | (\ (
      | (___) || )   ( || )   ( || (____/\  | (___) |  \   /  | (____/\| ) \ \__
      (_______)|/     \||/     \|(_______/  (_______)   \_/   (_______/|/   \__/
-Do you want to play again?
+
 
 """)
-
-while True:
-    start_game()
-    restart = input('do you want to restart Y/N?')
-    if restart == 'N':
-        break
-    elif restart == 'Y':
-        continue
-
-start_game()
