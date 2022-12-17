@@ -19,99 +19,59 @@ the player guesses wrong they lose and the guessed word is prompted on the scree
 ## FEATURES
 ***
 ### EXISTING FEATURES
-- __A quiz logo__
-- Featured a logo, to allow users know the name of the quiz game.
+- __User login__
+- The user is prompted to input name to start game.
+- The name must be more than 3 words.
 
+![Screenshot 2022-12-17 at 06 50 30](https://user-images.githubusercontent.com/108898698/208229608-a5862680-63bf-44ab-946f-c1de52a12c5b.png)
 
-![image](https://user-images.githubusercontent.com/108898698/201007326-54eddf4d-77d6-4d78-b305-1358f4da4e72.png)
+- __Accepts User-input__
+- __Shows amount of lives__
 
-- __The login page__
+![Screenshot 2022-12-17 at 06 56 29](https://user-images.githubusercontent.com/108898698/208229812-abee9ffd-3b15-4fd4-9851-80820b22cae4.png)
 
-The login page includes a photograph with a login box to allow users choose a username and login into the game. The page also introduces users to Guru Quiz.
+- __Shows win or lose__
 
-![Capture JPG3](https://user-images.githubusercontent.com/108898698/201025775-bde501b1-3de3-4ecd-ba88-41ef582e61b2.JPG)
+![Screenshot 2022-12-17 at 07 08 58](https://user-images.githubusercontent.com/108898698/208230295-a1f27c84-c8e9-44dd-9ae1-5960c83a5d26.png)
 
-- __Quiz area__
-- The Quiz area is where the questions begins, this feature shows a box with different questions with buttons for previous or next. Although for this game, users are not allowed to go back, that's why a refresh button is located in the quiz area to refresh game to start from the beginning. Starting off in this quiz area gets users excited because they will allows look forward to the next question till they get to the end.
+***
+
+### FUTURE FEATURES
+- Show clues of letter in the secret word.
  
-
-![Capture JPG4](https://user-images.githubusercontent.com/108898698/201026310-dbd7b29e-7d1e-409a-aad0-dc20e67cc21c.JPG)
-
-
-- __Score card__
-- This section is to allow users see how many questions they scored right or wrong. There is an emoji is the user scored all questions right or wrong.
-
-![Capture JPG5](https://user-images.githubusercontent.com/108898698/201027488-a51850a3-6815-4b27-b8e5-2aa7c3477917.JPG)
-
-
-## UX &#8722; User Experience Design
-### User Stories
- 
-- As a first time user, I want to be able to create username and navigate into the quiz area.
-- As a user, I want to be able to answer all questions and navigate to the last question.
-- As a user, I want to be able to see what I scored in answering all questions.
-- As a user, I want to be able to start the game again.
-
-
-#### Wireframes
-<!-- wireframe images and link to more -->
-- Mobile, Ipad and Desktop wireframes are all available below:
-*See
-![New Wireframe 1](https://user-images.githubusercontent.com/108898698/201029580-288e14d9-6f9a-41c2-b1ba-68028dea6475.png)
-
-![New Wireframe 2](https://user-images.githubusercontent.com/108898698/201029697-fda6d88c-c31f-45fc-8094-23f7e464e018.png)
-
-![New Wireframe 3](https://user-images.githubusercontent.com/108898698/201029759-a0cd1e43-7452-42d5-b7f2-5564f44a1648.png)
-
-![New Wireframe 4](https://user-images.githubusercontent.com/108898698/201029884-463987c5-5f4c-42c9-a6a8-eccb2940e104.png)
-
-![New Wireframe 5](https://user-images.githubusercontent.com/108898698/201029978-d2af2a71-95a7-4176-9c0c-ff5b18b73b98.png)
-
-![New Wireframe 6](https://user-images.githubusercontent.com/108898698/201030067-8008eec0-fe1a-400e-9511-71305e3180d0.png)
-***
-#### Typography
- The fonts are imported into the CSS file from *[Google Fonts](https://fonts.google.com/)*
-- **poppins** has been chosen as the main font for the title text. I chose it because it looks appealing to the quiz users and makes the questions clear. The fallback family of **San Serif** maintains the personal appearance.
-***
-#### Imagery
-I liked the quiz to look sporty and appealing to users who like kickboxing or like sports. the main image used was downloaded from *[pexel.com](https://pexel.com/)*
 ***
 
-## Technologies
-
-- *[Balsamiq](https://balsamiq.com/)*
-    - Balsamiq was used to create [wireframes](./readme-content/wireframe) for the project
-- *[emojipedia](https://emojipedia.org/)*
-    - The project uses icons from emojipedia
-- *[Chrome DevTools](https://developer.chrome.com/docs/devtools/)*
-    - Once the website was made to a basic deployment level, this extension featured heavily as I modified sizings and spacings
-- *[Google Fonts](https://fonts.google.com/)*
-    - The fonts used in the website are imported from Google Fonts
-- *[W3C Validation Service](validator.w3.org)*
-    - I used this service to check the HTML and CSS files for errors. During development, I copied the entire text from the files and ran them through the direct input method
+## DATA MODEL
+I decided to use a game class as my model. The game class stores the name of the game,
+how to play the game, instruction and user name input.
+The class has method to help play the game such print method to print out the current board, 
 ***
-## Testing
-- I tested this quiz works in different browsers: Chrome, Safari and Firefox.
-- I have tested this project to see that it is responsive and it works as intended.
-- All game user must-haves has been addressed and tested.
-- Validation checks came back with no error.
-- I also tested with lighthouse and it reflected a desirable results.
-- All anchor elements have been tested to ensure the correct href value has been used and external links open in new tabs.
-- Each page has been run through the W3C markup validation service, the index page and CSS reports are shown below
-![index.html Validation](![Capture JPG7](https://user-images.githubusercontent.com/108898698/201038113-5dccb870-c6c6-4d88-9cf2-835a6765b5c8.JPG))
-![CSS Validation](![Capture JPG6](https://user-images.githubusercontent.com/108898698/201036182-c99dff60-d123-41e3-925e-c8a0ef38bfb8.JPG))
 
-- I have run the entire website through Chrome's lighthouse audit service and the results are shown below.
-
-![Mobile Lighthouse Results](![Capture JPG8](https://user-images.githubusercontent.com/108898698/201039481-3749f0fc-17ab-4a2d-8fee-1378d28fcbc0.JPG))
-
-![Desktop Lighthouse Results](![Capture JPG8](https://user-images.githubusercontent.com/108898698/201039481-3749f0fc-17ab-4a2d-8fee-1378d28fcbc0.JPG))
+## TESTING
 ***
-## Bugs
-- No unfixed bugs
+I have manually tested this project by doing the following:
+
+- Passed the code through a PEP8 linter and confirmed there are no significant problems
+- Tested severally in my local terminal and also Heroku terminal.
+
+***
+## BUGS
+- At first I struggled with invalid syntax because I put one = instead of double == I was able to
+figure it out eventually.
+- My code was giving some errors when I try to add the restart code
+
+### Remaining Bugs
+- No bugs remaining
+***
+
+### Validator testing
+- PEP8
+- No significant error was returned, except invalid escape sequence which is as a result
+of ASCII in my code.
+
 ***
 ## Deployment
-Throughout the project, I have used GitHubs application. This program have allowed me to stage and commit files as and when necessary. Once committed, deploying the project to a live site has been achieved.
+
 
 
 - Take note of the URL provided
