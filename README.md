@@ -58,7 +58,7 @@ I have manually tested this project by doing the following:
 ## BUGS
 - At first I struggled with invalid syntax because I put one = instead of double == I was able to
 figure it out eventually.
-- My code was giving some errors when I try to add the restart code
+- My code was giving some errors when I try to add the restart code, but eventually fixed it by wraping my code with the game class.
 
 ### Remaining Bugs
 - No bugs remaining
@@ -72,20 +72,15 @@ of ASCII in my code.
 ***
 ## Deployment
 
+This project was deployed using Heroku.
 
+- Steps for deployment
+- Fork or clone this repository
+- Create a new Heroku app
+- Set the buildbacks to python and NodeJS in that order
+- click on Deploy
 
-- Take note of the URL provided
-
-![URL Snip](![Capture JPG9](https://user-images.githubusercontent.com/108898698/201040498-50aa4af7-cb70-4e62-9960-fb1cf7cb3e8d.JPG))
-
-- Click the link or copy the URL to a browser to reach the deployed page
-https://estherbabs.github.io/Guru-Quiz/
-
-The site is now live.
 ***
 ## Credits
-- Some of the codes from javascript was taken from a youtuber called codewithdarkwa.
-
-
-### Media
-- The photo is taken from [Pexels] (https://pexels.com)
+- Code Institute for Readme Sample
+- ACSII design for the name of the game (Wordle game and Game over) [patorjk] (https://patorjk.com/software/taag/#p=display&f=Graceful&t=Wordle%20game)
