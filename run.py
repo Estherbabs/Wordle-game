@@ -86,10 +86,11 @@ class game(object):
             print(self.clue)
             print(" You have " + str(self.heart_symbol * self.lives) + " lives remaining")
             guess = input('Guess a letter or the whole word: ')
-            if guess in ["*", ".", ",", "!", "?", "@", "(", ")", ";", ":", " ", "#"]:
+            if guess in ["*", ".", ",", "!", "?", "@", "(", ")", ";", ":", " ",
+                         "1", "2", "#", "3", "4", "5", "6", "7", "8", "9", "0",
+                         "=", "+", "$", "<", ">", "/", "|"]:
                 print("Please input a valid letter or word")
                 continue
-            guess = self.validate_word(guess)
             if guess == self.secret_word:
                 self.guessed_word_correctly = True
                 break
